@@ -1,0 +1,30 @@
+{
+  "name": "protractor-e2e-framework",
+  "version": "0.0.1",
+  "description": "Protractor e2e framework",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morganpizzini/protractor-e2e-framework.git"
+  },
+  "keywords": [
+    "protractor",
+    "e2e",
+    "framework",
+    "typescript"
+  ],
+  "author": "Morgan Pizzini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morganpizzini/protractor-e2e-framework/issues"
+  },
+  "homepage": "https://github.com/morganpizzini/protractor-e2e-framework#readme",
+  "devDependencies": {
+    "typescript": "^2.8.1"
+  }
+}
