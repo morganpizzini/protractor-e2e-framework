@@ -1,6 +1,6 @@
 {
   "name": "protractor-e2e-framework",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Protractor e2e framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
