@@ -8,3 +8,5 @@ var protractorUtils_1 = require("./lib/utils/protractorUtils");
 exports.ProtractorUtils = protractorUtils_1.ProtractorUtils;
 var urlSchema_1 = require("./lib/models/urlSchema");
 exports.UrlSchema = urlSchema_1.UrlSchema;
+var NavigationBaseFlow_1 = require("./lib/workflows/NavigationBaseFlow");
+exports.NavigationBaseFlow = NavigationBaseFlow_1.NavigationBaseFlow;
