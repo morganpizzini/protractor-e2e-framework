@@ -85,12 +85,13 @@ gulp.task('add', ['default'], function () {
 gulp.task('commit', ['pre-commit'], function () {
     console.log(resolveArgs("-m"));
     return gulp.src('.')
-        .pipe(git.commit(resolveArgs("-m")), { emitData: true })
-            .on('data', function (data) {
-                git.push('origin', function (err) {
-                    if (err) throw err;
-                });
-            });
+        .pipe(git.commit(resolveArgs("-m")))
+        // , { emitData: true })
+        //     .on('data', function (data) {
+        //         git.push('origin', function (err) {
+        //             if (err) throw err;
+        //         });
+        //     });
 });
 
 gulp.task('push',['commit'], function () {
