@@ -10,3 +10,7 @@ var urlSchema_1 = require("./lib/models/urlSchema");
 exports.UrlSchema = urlSchema_1.UrlSchema;
 var NavigationBaseFlow_1 = require("./lib/workflows/NavigationBaseFlow");
 exports.NavigationBaseFlow = NavigationBaseFlow_1.NavigationBaseFlow;
+var component_po_1 = require("./lib/entities/component.po");
+exports.BaseComponent = component_po_1.BaseComponent;
+var modal_po_1 = require("./lib/entities/modal.po");
+exports.BaseModal = modal_po_1.BaseModal;

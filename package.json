@@ -1,11 +1,11 @@
 {
   "name": "protractor-e2e-framework",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Protractor e2e framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "gulp test",
+    "test": "mocha -r ts-node/register test/**/*.ts",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js -- -R spec",
     "build": "tsc"
   },
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/morganpizzini/protractor-e2e-framework#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^5.0.0",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "del": "^3.0.0",
@@ -39,8 +41,10 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.0.5",
     "run-sequence": "^2.2.1",
+    "ts-node": "^5.0.1",
     "tslint": "^5.9.1",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "typings": "^2.1.1"
   },
   "dependencies": {
     "@types/lodash": "^4.14.106",

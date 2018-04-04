@@ -63,12 +63,14 @@ gulp.task('t:watch', ['test'], function () {
 gulp.task('bt:watch', ['build:test'], function () {
     gulp.watch([
         PATHS.src + '/**/*.ts',
-        PATHS.test + '/**/*.ts'
+        PATHS.test + '/**/*.ts',
+        PATHS.test + '/**/*.js'
     ], ['build:test']);
 });
 
 gulp.task('clean', ['clean:build']);
 gulp.task('build:test', gulpSequence('build', 'test'));
+gulp.task('dist', gulpSequence('clean', 'build'));
 gulp.task('production', gulpSequence('clean','build:test'));
 gulp.task('default', ['build']);
 
