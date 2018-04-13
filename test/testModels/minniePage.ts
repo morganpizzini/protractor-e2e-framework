@@ -1,10 +1,10 @@
 import { BasePage } from "../../index";
 
-export class DummyPage extends BasePage{
+export class MinniePage extends BasePage{
     /**
      *
      */
     constructor() {
-        super('dummy-url');
+        super('minnie-url');
     }
 }

@@ -154,11 +154,6 @@ it('should login', function (done) {
 ```
 ---
 
-### References
-* [protractor](https://github.com/angular/protractor)
-* [ts-deferred](https://github.com/shogogg/ts-deferred)
----
-
 ### Problems? Please let us know
 
 If you run into any problems or issues, **please** let us know so we can address and fix them right away. You can report issues on GitHub:

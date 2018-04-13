@@ -1,10 +1,19 @@
-import { NavigationBaseFlow } from '../../lib/workflows/NavigationBaseFlow';
+import { NavigationBaseFlow } from '../../index';
 import { Deferred } from "ts-deferred";
+import {DummyPage} from './dummyPage'
+import * as _ from "lodash";
 
-export class DummyNavigationFlow extends NavigationBaseFlow {
+export class DummyNavigationFlow extends NavigationBaseFlow<DummyPage> {
+    /**
+     *
+     */
+    constructor() {
+        // set workflowKey
+        super(DummyPage);
+    }
     navigateTo(): Promise<any> {
-        const d: Deferred<void> = new Deferred<void>();
-        d.resolve();
+        const d: Deferred<any> = new Deferred<any>();
+        d.resolve(this.pageInstance);
         return d.promise;
     }
 }

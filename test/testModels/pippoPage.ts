@@ -1,10 +1,10 @@
 import { BasePage } from "../../index";
 
-export class DummyPage extends BasePage{
+export class PippoPage extends BasePage{
     /**
      *
      */
     constructor() {
-        super('dummy-url');
+        super('pippo-url');
     }
 }

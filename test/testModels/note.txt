@@ -1,0 +1,28 @@
+Navigation flow should be
+            -> pippo
+. dummy               -> mickey  -> minnie
+            -> pluto
+
+Mickey should implement two kind of navigation flow.. 
+could insert generic key value array where by navigationFlow i can set parent flow.
+- logBook logic -> Set default flow in array, resolve flow in navigationFlow class and navigate
+
+```
+{
+    pippo: dummy,
+    mickey:pippo,
+    minnie:mickey
+}
+
+dummy -> pippo -> mickey -> minnie
+
+navBook[mickey] = pluto
+
+dummy -> pluto -> mickey -> minnie
+```
+
+// ------------------------------ \\
+
+i should be able to move to minnie by different actions on Pippo, 
+like click on 2 different buttons inside Pippo which send me to Mickey and then to Minnie
+handled by specific navflowenum and then reflect on some framework config for know which is the default action on navigation
