@@ -10,6 +10,9 @@ var BasePage = /** @class */ (function () {
         this.pageId = pageId;
         this.pageBaseUrl = frameworkConfiguration_1.FrameworkConfiguration.browserData.urls[this.pageId];
     }
+    BasePage.prototype.getPageId = function () {
+        return this.pageId;
+    };
     BasePage.prototype.goToPageUrl = function () {
         var d = new ts_deferred_1.Deferred();
         var self = this;
@@ -40,7 +43,7 @@ var BasePage = /** @class */ (function () {
         if (frameworkConfiguration_1.FrameworkConfiguration.workflowNavigationEnabled) {
             // some kind of navigation by workflows
             try {
-                return frameworkConfiguration_1.FrameworkConfiguration.resolveFlow(this.pageId).navigateTo();
+                return frameworkConfiguration_1.FrameworkConfiguration.resolveType(this.pageId).navigateTo();
             }
             catch (error) {
                 var d = new ts_deferred_1.Deferred();

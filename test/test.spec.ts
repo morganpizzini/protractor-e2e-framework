@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { FrameworkConfiguration } from '../lib/config/frameworkConfiguration';
-import { DummyNavigationFlow } from './testModels/DummyNavigationFlow';
+import { DummyNavigationFlow } from './testModels/dummyNavigationFlow';
 import { PippoNavigationFlow } from './testModels/pippoNavigationFlow';
 import { MickeyNavigationFlow } from './testModels/mickeyNavigationFlow';
 import { MinnieNavigationFlow } from './testModels/minnieNavigationFlow';

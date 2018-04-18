@@ -1,4 +1,4 @@
-import { INavigationFlow } from './InavigationFlow';
+import { INavigationFlow } from './INavigationFlow';
 import { FrameworkConfiguration } from '../config/frameworkConfiguration';
 import { BasePage } from '../entities/page.po';
 // TODO implement some 'isLoggedIn' state
