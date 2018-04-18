@@ -1,11 +1,10 @@
 import { expect } from 'chai';
-import { FrameworkConfiguration } from '../lib/config/frameworkConfiguration';
+import { FrameworkConfiguration, INavigationFlow } from '../index';
 import { DummyNavigationFlow } from './testModels/dummyNavigationFlow';
 import { PippoNavigationFlow } from './testModels/pippoNavigationFlow';
 import { MickeyNavigationFlow } from './testModels/mickeyNavigationFlow';
 import { MinnieNavigationFlow } from './testModels/minnieNavigationFlow';
 import { PlutoNavigationFlow } from './testModels/plutoNavigationFlow';
-import { INavigationFlow } from '../lib/workflows/INavigationFlow';
 
 describe('IoC registration tests', () => {
     var config = FrameworkConfiguration;
