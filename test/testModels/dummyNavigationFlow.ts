@@ -8,7 +8,7 @@ export class DummyNavigationFlow extends NavigationBaseFlow<DummyPage> {
      *
      */
     constructor() {
-        // set workflowKey
+        // set workflow page
         super(DummyPage);
     }
     navigateTo(): Promise<any> {

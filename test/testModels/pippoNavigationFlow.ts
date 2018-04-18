@@ -9,7 +9,7 @@ export class PippoNavigationFlow extends NavigationBaseFlow<PippoPage> {
      *
      */
     constructor() {
-        // set workflowKey
+        // set workflow page
         super(PippoPage);
     }
     navigateTo(): Promise<any> {

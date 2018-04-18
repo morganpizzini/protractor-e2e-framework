@@ -10,7 +10,7 @@ export class MickeyNavigationFlow extends NavigationBaseFlow<MickeyPage> {
      *
      */
     constructor() {
-        // set workflowKey
+        // set workflow page
         super(MickeyPage);
     }
     navigateTo(): Promise<any> {

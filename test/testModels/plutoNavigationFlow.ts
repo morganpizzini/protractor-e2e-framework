@@ -9,7 +9,7 @@ export class PlutoNavigationFlow extends NavigationBaseFlow<PlutoPage> {
      *
      */
     constructor() {
-        // set workflowKey
+        // set workflow page
         super(PlutoPage);
     }
     navigateTo(): Promise<any> {

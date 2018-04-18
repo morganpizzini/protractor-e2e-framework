@@ -9,7 +9,7 @@ export class MinnieNavigationFlow extends NavigationBaseFlow<MinniePage> {
      *
      */
     constructor() {
-        // set workflowKey
+        // set workflow page
         super(MinniePage);
     }
     navigateTo(): Promise<any> {
