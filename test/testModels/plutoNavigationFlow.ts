@@ -1,7 +1,6 @@
 import { NavigationBaseFlow } from '../../index';
 import { Deferred } from "ts-deferred";
 import { DummyPage } from './dummyPage';
-import { DummyNavigationFlow } from './dummyNavigationFlow';
 import { PlutoPage } from './plutoPage';
 import * as _ from "lodash";
 

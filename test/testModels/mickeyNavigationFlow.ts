@@ -1,8 +1,7 @@
-import { NavigationBaseFlow } from '../../lib/workflows/NavigationBaseFlow';
+import { NavigationBaseFlow } from '../../index';
 import { Deferred } from "ts-deferred";
 import { PippoPage } from './pippoPage';
 import { PlutoPage } from './plutoPage';
-import { PlutoNavigationFlow } from './plutoNavigationFlow';
 import { MickeyPage } from './mickeyPage';
 import * as _ from "lodash";
 
