@@ -34,6 +34,18 @@ export class ProtractorUtils {
         return d.promise;
     }
     /**
+     * Find sibling element
+     */
+    public static findSibling(elIdentify: string, obj: any): Promise<boolean> {
+        const d: Deferred<boolean> = new Deferred<boolean>();
+        this.any(elIdentify, obj.element(by.xpath('..')))
+            .then((count) => {
+                d.resolve(count > 0);
+            })
+            .catch(d.reject);
+        return d.promise;
+    }
+    /**
      * Generic Find elements
      */
     public static find(elIdentify: string, obj?: any): ElementArrayFinder {
