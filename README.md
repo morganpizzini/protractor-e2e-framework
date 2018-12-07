@@ -151,9 +151,9 @@ beforeEach(function() {
         
         // flowBook registration - can be done by 'from-to' funcion or by chain
         // for reach SignInPage i should navigate from BasePage
-        config.registerFlow('base', 'signIn');
+        FrameworkConfiguration.registerFlow('base', 'signIn');
         // for reach HomePage i should navigate from BasePage then SignIn
-        config.registerFlow('base','signIn')
+        FrameworkConfiguration.registerFlow('base','signIn')
                             .append('home-page');
                             
         // register by browser url id and type
