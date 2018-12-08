@@ -14,3 +14,5 @@ var component_po_1 = require("./lib/entities/component.po");
 exports.BaseComponent = component_po_1.BaseComponent;
 var modal_po_1 = require("./lib/entities/modal.po");
 exports.BaseModal = modal_po_1.BaseModal;
+var values_collector_1 = require("./lib/models/values-collector");
+exports.ValuesCollector = values_collector_1.ValuesCollector;

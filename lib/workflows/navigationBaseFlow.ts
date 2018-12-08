@@ -7,8 +7,8 @@ export interface NoParamConstructor<T> {
     new(): T;
 }
 
-export abstract class NavigationBaseFlow<T extends BasePage> implements INavigationFlow{
-    pageInstance: T;
+export abstract class NavigationBaseFlow<T extends BasePage> implements INavigationFlow {
+    pageInstance?: T;
     // public pageInstance: T= new () => T;
     // from page navigation flow
     // protected basePage: any = null;
@@ -17,13 +17,19 @@ export abstract class NavigationBaseFlow<T extends BasePage> implements INavigat
      * NavigationFlowBase constructor
      */
     // constructor(fromNavigationFlow?: INavigationFlow) {
-    constructor(ctor: NoParamConstructor<T>) {
+    constructor(ctor?: NoParamConstructor<T>) {
+        if (ctor === undefined)
+        {
+            this.pageInstance = undefined;
+            return;
+        }
         this.pageInstance = new ctor();
         const fromWorkflowKey = FrameworkConfiguration.resolvePreviousFlowKey(this.pageInstance.getPageId());
+
         if (!fromWorkflowKey)
             //there's no navigation flow dependencies
             return;
-        
+
         // set previous navigation flow dependencies
         this.fromNavigationFlow = FrameworkConfiguration.resolveType(fromWorkflowKey);
         // if (fromNavigationFlow) {

@@ -77,4 +77,31 @@ export class ProtractorUtils {
         // Find element and return promise
         return obj ? obj.all(locator) : element.all(locator);
     }
+    /**
+     * go back by one level from obj and looking for provided identifier
+     */
+    public static anyFromParent(elIdentify: string, obj: any): Promise<boolean> {
+        // ElementArrayFinder
+        const d: Deferred<boolean> = new Deferred<boolean>();
+        ProtractorUtils.any(elIdentify, obj.element(by.xpath('..')))
+            .then((count) => {
+                d.resolve(count > 0);
+            })
+            .catch(d.reject);
+        return d.promise;
+    }
+
+    /**
+     * from provided element id select optionvalue
+     */
+    public static selectTo(elIdentify: string, optionValue: string): Promise<void> {
+        const d: Deferred<void> = new Deferred<void>();
+
+         element(by.css('select[id="' + elIdentify + '"] option[value="' + optionValue + '"]')).click().then(() => {
+             d.resolve();
+         })
+         .catch(d.reject);
+
+        return d.promise;
+    }
 }
