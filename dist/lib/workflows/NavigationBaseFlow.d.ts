@@ -4,12 +4,12 @@ export interface NoParamConstructor<T> {
     new (): T;
 }
 export declare abstract class NavigationBaseFlow<T extends BasePage> implements INavigationFlow {
-    pageInstance: T;
+    pageInstance?: T;
     protected fromNavigationFlow: INavigationFlow;
     /**
      * NavigationFlowBase constructor
      */
-    constructor(ctor: NoParamConstructor<T>);
+    constructor(ctor?: NoParamConstructor<T>);
     /**
      * navigate out from page
      * every navigationflow know which actions to do for navigate to his self page

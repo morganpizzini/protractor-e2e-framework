@@ -6,6 +6,7 @@ import { INavigationFlow } from './lib/workflows/INavigationFlow';
 import { NavigationBaseFlow } from './lib/workflows/navigationBaseFlow';
 import { BaseComponent } from './lib/entities/component.po';
 import { BaseModal } from './lib/entities/modal.po';
+import { ValuesCollector } from './lib/models/values-collector';
 
 export {
     BasePage,
@@ -14,6 +15,7 @@ export {
     FrameworkConfiguration,
     ProtractorUtils,
     UrlSchema,
+    ValuesCollector,
     INavigationFlow,
     NavigationBaseFlow
 };

@@ -36,6 +36,18 @@ var ProtractorUtils = /** @class */ (function () {
         return d.promise;
     };
     /**
+     * Find sibling element
+     */
+    ProtractorUtils.findSibling = function (elIdentify, obj) {
+        var d = new ts_deferred_1.Deferred();
+        this.any(elIdentify, obj.element(protractor_1.by.xpath('..')))
+            .then(function (count) {
+            d.resolve(count > 0);
+        })
+            .catch(d.reject);
+        return d.promise;
+    };
+    /**
      * Generic Find elements
      */
     ProtractorUtils.find = function (elIdentify, obj) {
@@ -66,6 +78,30 @@ var ProtractorUtils = /** @class */ (function () {
         var locator = protractor_1.by.css(css);
         // Find element and return promise
         return obj ? obj.all(locator) : protractor_1.element.all(locator);
+    };
+    /**
+     * go back by one level from obj and looking for provided identifier
+     */
+    ProtractorUtils.anyFromParent = function (elIdentify, obj) {
+        // ElementArrayFinder
+        var d = new ts_deferred_1.Deferred();
+        ProtractorUtils.any(elIdentify, obj.element(protractor_1.by.xpath('..')))
+            .then(function (count) {
+            d.resolve(count > 0);
+        })
+            .catch(d.reject);
+        return d.promise;
+    };
+    /**
+     * from provided element id select optionvalue
+     */
+    ProtractorUtils.selectTo = function (elIdentify, optionValue) {
+        var d = new ts_deferred_1.Deferred();
+        protractor_1.element(protractor_1.by.css('select[id="' + elIdentify + '"] option[value="' + optionValue + '"]')).click().then(function () {
+            d.resolve();
+        })
+            .catch(d.reject);
+        return d.promise;
     };
     return ProtractorUtils;
 }());

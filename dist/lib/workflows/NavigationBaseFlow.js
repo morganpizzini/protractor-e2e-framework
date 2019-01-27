@@ -11,6 +11,10 @@ var NavigationBaseFlow = /** @class */ (function () {
         // from page navigation flow
         // protected basePage: any = null;
         this.fromNavigationFlow = {};
+        if (ctor === undefined) {
+            this.pageInstance = undefined;
+            return;
+        }
         this.pageInstance = new ctor();
         var fromWorkflowKey = frameworkConfiguration_1.FrameworkConfiguration.resolvePreviousFlowKey(this.pageInstance.getPageId());
         if (!fromWorkflowKey)
